@@ -10,8 +10,8 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class ContentCalendarApplication {
 
 	public static void main(String[] args) {
-		ConfigurableApplicationContext context =  SpringApplication.run(ContentCalendarApplication.class, args);
-		Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
+		SpringApplication.run(ContentCalendarApplication.class, args);
+		
 	}
 
 }
