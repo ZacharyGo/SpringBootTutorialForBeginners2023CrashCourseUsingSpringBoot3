@@ -18,6 +18,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import dev.zach.contentcalendar.model.Content;
 import dev.zach.contentcalendar.repository.ContentCollectionRepository;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/content")
@@ -43,9 +44,11 @@ public class ContentController {
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Content not found.")));
     }
     
+   // @Valid Marks a property, method parameter or method return type for validation cascading.
+    
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("")
-    public void create(@RequestBody Content content) {
+    public void create(@Valid @RequestBody Content content) { 
     	repository.save(content);
     }
     
