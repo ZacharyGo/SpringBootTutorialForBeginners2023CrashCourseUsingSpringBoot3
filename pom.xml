@@ -44,6 +44,10 @@
 			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1aeacab143bf124e8884ed7fb23f45f76006e4e8
 	</dependencies>
 
 	<build>

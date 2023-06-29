@@ -53,7 +53,8 @@ public class ContentController {
     }
     
     @PutMapping("/{id}")
-    public void update(@RequestBody Content content, @PathVariable Integer id) {
+    public void update(@RequestBody Content content, 
+) {
     	if(!repository.existByID(id)) {
     		throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Content not found!");
     	}
